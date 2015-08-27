@@ -1,0 +1,17 @@
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\obj\Debug\FTPTemp.DialogForm.resources
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\obj\Debug\FTPTemp.Form1.resources
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\obj\Debug\FTPTemp.FTPAdminForm.resources
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\obj\Debug\FTPTemp.IndustryForm.resources
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\obj\Debug\FTPTemp.Properties.Resources.resources
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\obj\Debug\FTPTemp.csproj.GenerateResource.Cache
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\obj\Debug\FTPTemp.csprojResolveAssemblyReference.cache
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\bin\Debug\FTPTemp.exe.config
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\bin\Debug\FTPTemp.exe
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\bin\Debug\FTPTemp.pdb
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\bin\Debug\System.Data.SQLite.dll
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\bin\Debug\System.Data.SQLite.xml
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\obj\Debug\FTPTemp.exe
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\obj\Debug\FTPTemp.pdb
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\obj\Debug\FTPTemp.FTPDemoForm1.resources
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\bin\Debug\ScaleableImageControl.dll
+F:\Visual Studio 2012\Projects\FTPDemo\FTPTemp\bin\Debug\ScaleableImageControl.pdb

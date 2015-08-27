@@ -1,0 +1,11 @@
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\bin\Ciena\ScaleableImageControl.dll
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\bin\Ciena\ScaleableImageControl.pdb
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Ciena\ScaleableImageControl.csprojResolveAssemblyReference.cache
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Ciena\ScaleableImageCtrl.baml
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Ciena\ScaleableImageCtrl.g.cs
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Ciena\ScaleableImageControl_MarkupCompile.cache
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Ciena\ScaleableImageControl.g.resources
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Ciena\ScaleableImageControl.Properties.Resources.resources
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Ciena\ScaleableImageControl.csproj.GenerateResource.Cache
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Ciena\ScaleableImageControl.dll
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Ciena\ScaleableImageControl.pdb

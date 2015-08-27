@@ -1,0 +1,21 @@
+C:\temp\WindowsFormsApplication1\ScaleableImageControl\obj\Debug\ScaleableImageCtrl.baml
+C:\temp\WindowsFormsApplication1\ScaleableImageControl\obj\Debug\ScaleableImageCtrl.g.cs
+C:\temp\WindowsFormsApplication1\ScaleableImageControl\obj\Debug\ScaleableImageControl_MarkupCompile.cache
+C:\temp\WindowsFormsApplication1\ScaleableImageControl\obj\Debug\ScaleableImageControl.g.resources
+C:\temp\WindowsFormsApplication1\ScaleableImageControl\obj\Debug\ScaleableImageControl.Properties.Resources.resources
+C:\temp\WindowsFormsApplication1\ScaleableImageControl\obj\Debug\ScaleableImageControl.csproj.GenerateResource.Cache
+C:\temp\WindowsFormsApplication1\ScaleableImageControl\bin\Debug\ScaleableImageControl.dll
+C:\temp\WindowsFormsApplication1\ScaleableImageControl\bin\Debug\ScaleableImageControl.pdb
+C:\temp\WindowsFormsApplication1\ScaleableImageControl\obj\Debug\ScaleableImageControl.dll
+C:\temp\WindowsFormsApplication1\ScaleableImageControl\obj\Debug\ScaleableImageControl.pdb
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Debug\ScaleableImageCtrl.baml
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Debug\ScaleableImageCtrl.g.cs
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Debug\ScaleableImageControl.Properties.Resources.resources
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Debug\ScaleableImageControl.csproj.GenerateResource.Cache
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\bin\Debug\ScaleableImageControl.dll
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\bin\Debug\ScaleableImageControl.pdb
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Debug\ScaleableImageControl_MarkupCompile.cache
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Debug\ScaleableImageControl.g.resources
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Debug\ScaleableImageControl.dll
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Debug\ScaleableImageControl.pdb
+C:\Visual Studio 2012\Projects\FTPDemo\ScaleableImageControl\obj\Debug\ScaleableImageControl.csprojResolveAssemblyReference.cache
