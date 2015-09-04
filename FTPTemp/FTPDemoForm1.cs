@@ -893,9 +893,18 @@ namespace FTPTemp
             progressBar1.ForeColor = progressBar2.ForeColor = progressBar3.ForeColor = progressBar4.ForeColor = progressBar5.ForeColor = primaryColor;          // Color.FromArgb(0, 91, 187);  // Color.RgoyalBlue;
             progressBar1.Style = progressBar2.Style = progressBar3.Style = progressBar4.Style = progressBar5.Style = ProgressBarStyle.Continuous;
 
-            progressBar1.ForeColor = progressBar2.ForeColor = progressBar3.ForeColor = progressBar4.ForeColor = progressBar5.ForeColor = Utils.getColorFromValue(theme.ProgressbarColor);
+            if (theme.ProgressbarColor.Length > 0)
+            {
+                progressBar1.ForeColor = progressBar2.ForeColor = progressBar3.ForeColor = progressBar4.ForeColor = progressBar5.ForeColor = Utils.getColorFromValue(theme.ProgressbarColor);
+            }
+            if (theme.TextColor.Length > 0)
+            {
             Utils.SetForeColorToLabels( this, Utils.getColorFromValue(theme.TextColor));
-            this.BackColor = Utils.getColorFromValue(theme.BackgroundColor);
+            }
+            if (theme.BackgroundColor.Length > 0)
+            {
+                this.BackColor = Utils.getColorFromValue(theme.BackgroundColor);
+            }
             
 //            pictureLogo.ImageLocation = demoDir + demoLogo;
 //
