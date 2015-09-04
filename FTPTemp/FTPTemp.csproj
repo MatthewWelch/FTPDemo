@@ -41,6 +41,7 @@
       <HintPath>..\ScaleableImageControl\bin\Debug\ScaleableImageControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.97.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -74,15 +75,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FtpData.cs" />
-    <Compile Include="FTPDemoDataSet.cs">
-      <DependentUpon>FTPDemoDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="FTPDemoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FTPDemoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FTPAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,17 +132,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="FTPDemoDataSet.xsc">
-      <DependentUpon>FTPDemoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FTPDemoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FTPDemoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FTPDemoDataSet.xss">
-      <DependentUpon>FTPDemoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -34,8 +34,6 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label12 = new System.Windows.Forms.Label();
             this.speedLabel = new System.Windows.Forms.Label();
-            this.cbSimulate = new System.Windows.Forms.CheckBox();
-            this.cbAsync = new System.Windows.Forms.CheckBox();
             this.logToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -91,8 +89,6 @@
             this.panel3.Controls.Add(this.linkLabel1);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.speedLabel);
-            this.panel3.Controls.Add(this.cbSimulate);
-            this.panel3.Controls.Add(this.cbAsync);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(937, 635);
             this.panel3.Name = "panel3";
@@ -111,6 +107,7 @@
             this.linkLabel2.TabIndex = 37;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Ciena";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -123,6 +120,7 @@
             this.linkLabel1.TabIndex = 36;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "IonDesign";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label12
             // 
@@ -144,32 +142,6 @@
             this.speedLabel.Size = new System.Drawing.Size(55, 13);
             this.speedLabel.TabIndex = 35;
             this.speedLabel.Text = "Messages";
-            // 
-            // cbSimulate
-            // 
-            this.cbSimulate.AutoSize = true;
-            this.cbSimulate.Checked = true;
-            this.cbSimulate.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbSimulate.Location = new System.Drawing.Point(11, 19);
-            this.cbSimulate.Name = "cbSimulate";
-            this.cbSimulate.Size = new System.Drawing.Size(95, 21);
-            this.cbSimulate.TabIndex = 29;
-            this.cbSimulate.Text = "checkBox1";
-            this.cbSimulate.UseVisualStyleBackColor = true;
-            this.cbSimulate.Visible = false;
-            // 
-            // cbAsync
-            // 
-            this.cbAsync.AutoSize = true;
-            this.cbAsync.Checked = true;
-            this.cbAsync.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbAsync.Location = new System.Drawing.Point(11, 46);
-            this.cbAsync.Name = "cbAsync";
-            this.cbAsync.Size = new System.Drawing.Size(95, 21);
-            this.cbAsync.TabIndex = 5;
-            this.cbAsync.Text = "checkBox1";
-            this.cbAsync.UseVisualStyleBackColor = true;
-            this.cbAsync.Visible = false;
             // 
             // logToolStripMenuItem
             // 
@@ -275,7 +247,7 @@
             // 
             this.lFileSize.AutoSize = true;
             this.lFileSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lFileSize.Location = new System.Drawing.Point(294, 4);
+            this.lFileSize.Location = new System.Drawing.Point(374, 7);
             this.lFileSize.Name = "lFileSize";
             this.lFileSize.Size = new System.Drawing.Size(81, 24);
             this.lFileSize.TabIndex = 0;
@@ -285,7 +257,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(47, 4);
+            this.button1.Location = new System.Drawing.Point(47, 8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 23);
             this.button1.TabIndex = 2;
@@ -642,8 +614,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label speedLabel;
-        private System.Windows.Forms.CheckBox cbSimulate;
-        private System.Windows.Forms.CheckBox cbAsync;
         private WindowsFormsApplication1.VerticalProgressBar progressBar2;
         private System.Windows.Forms.ToolStripMenuItem logToolStripMenuItem;
         private System.Windows.Forms.ListBox listBox1;

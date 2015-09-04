@@ -32,6 +32,28 @@ namespace FTPTemp
             return rc;
         }
 
+        public static Color getColorFromValue(String colorName)
+        {
+            Color rc = Color.Empty;
+            try
+            {
+                if (colorName != null)
+                {
+                    Color c = Color.FromName(colorName);
+                    if (c.IsKnownColor)
+                    {
+                        rc = c;
+                    }
+                    else
+                    {
+                        rc = ColorTranslator.FromHtml("#" + colorName);
+                    }
+                }
+            }
+            catch (Exception e)
+            { }
+            return rc;
+        }
         // display human readable file size
         public static String BytesToString(long byteCount)
         {
@@ -55,5 +77,36 @@ namespace FTPTemp
             }
             return rc;
         }
+
+            public static void SetForeColorToLabels(Form frm, Color myColor)
+            {
+                Action<Control.ControlCollection> func = null;
+
+                func = (controls) =>
+                {
+                    foreach (Control control in controls)
+                        if (control is Label)
+                            (control as Label).ForeColor = myColor;
+                        else
+                            func(control.Controls);
+                };
+
+                func(frm.Controls);
+            }
+            public static void SetForeColorToTextBoxes(Form frm, Color myColor)
+            {
+                Action<Control.ControlCollection> func = null;
+
+                func = (controls) =>
+                {
+                    foreach (Control control in controls)
+                        if (control is TextBox)
+                            (control as TextBox).ForeColor = myColor;
+                        else
+                            func(control.Controls);
+                };
+
+                func(frm.Controls);
+            }
     }
 }

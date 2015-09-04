@@ -245,12 +245,12 @@ namespace FTPTemp
 
             foreach (DataGridViewRow row in this.dataGridView1.Rows)
             {
-                if (row.Cells[6].Value == null)
+                if (row.Cells["Bandwidth"].Value == null)
                 {
                     MessageBox.Show("Please change 'Bandwidth'  to a valid number", "Notice", MessageBoxButtons.OK);
                     return;
                 }
-                rc = decimal.TryParse(row.Cells[6].Value.ToString(), out dBandwidth);
+                rc = decimal.TryParse(row.Cells["Bandwidth"].Value.ToString(), out dBandwidth);
                 if (rc == false)
                 {
                     MessageBox.Show("Please change 'Bandwidth'  to a valid number", "Notice", MessageBoxButtons.OK);
@@ -260,10 +260,10 @@ namespace FTPTemp
 
             foreach (DataGridViewRow row in this.dataGridView1.Rows)
             {
-                rc = decimal.TryParse(row.Cells[6].Value.ToString(), out dBandwidth);
+                rc = decimal.TryParse(row.Cells["Bandwidth"].Value.ToString(), out dBandwidth);
                 dSec = filesize / ((1 - dOverhead) * dBandwidth * 1000000);
                 dSec = Decimal.Round(dSec, 2);
-                row.Cells[5].Value = dSec.ToString();
+                row.Cells["Duration"].Value = dSec.ToString();
                 //foreach (DataGridViewCell cell in row.Cells)
                 //{
                 //    if (cell.Size.IsEmpty)
@@ -328,6 +328,23 @@ namespace FTPTemp
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+//            if (e.ColumnIndex == 7)
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Bandwidth")
+            {
+                calcSeconds();
+            }
+        }
+
+        private void text_Leave(object sender, EventArgs e)
+        {
+            if (textOverhead.Modified == true || textSize.Modified == true)
+            {
+                calcSeconds();
+            }
         }
     }
 }

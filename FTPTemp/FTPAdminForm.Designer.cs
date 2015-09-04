@@ -66,6 +66,7 @@
             this.cbChangeIndustryOnRestart.Size = new System.Drawing.Size(155, 17);
             this.cbChangeIndustryOnRestart.TabIndex = 47;
             this.cbChangeIndustryOnRestart.Text = "Change Industry on Restart";
+            this.toolTip1.SetToolTip(this.cbChangeIndustryOnRestart, "Check box to use a different Industry on AutoRestart");
             this.cbChangeIndustryOnRestart.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -158,6 +159,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 35;
+            this.toolTip1.SetToolTip(this.textBox5, "Enter # of seconds after which this app will restart (0 for never).");
             // 
             // textBox6
             // 
@@ -172,6 +174,7 @@
             this.textSize.Name = "textSize";
             this.textSize.Size = new System.Drawing.Size(100, 20);
             this.textSize.TabIndex = 33;
+            this.textSize.Leave += new System.EventHandler(this.text_Leave);
             // 
             // textOverhead
             // 
@@ -179,6 +182,7 @@
             this.textOverhead.Name = "textOverhead";
             this.textOverhead.Size = new System.Drawing.Size(100, 20);
             this.textOverhead.TabIndex = 32;
+            this.textOverhead.Leave += new System.EventHandler(this.text_Leave);
             // 
             // textBox2
             // 
@@ -186,6 +190,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(430, 20);
             this.textBox2.TabIndex = 31;
+            this.toolTip1.SetToolTip(this.textBox2, "Enter Text to be displayed at the top of the main page.");
             // 
             // button1
             // 
@@ -206,6 +211,7 @@
             this.cbIndustry.Size = new System.Drawing.Size(121, 21);
             this.cbIndustry.TabIndex = 28;
             this.cbIndustry.Tag = "Industry";
+            this.toolTip1.SetToolTip(this.cbIndustry, "Choose a current Industry from this drop-down list.");
             this.cbIndustry.ValueMember = "ID";
             // 
             // dataGridView1
@@ -220,6 +226,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(931, 158);
             this.dataGridView1.TabIndex = 27;
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // menuStrip1
             // 

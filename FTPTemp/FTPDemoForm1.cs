@@ -9,6 +9,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -91,9 +92,16 @@ namespace FTPTemp
             getData();
             SetUI();
 
-            // fix 9/26/14 add task delay here to allow access to Admin beforeFTP process starts
+            // Add a link to the LinkLabel.
+            LinkLabel.Link link1 = new LinkLabel.Link();
+            link1.LinkData = "http://www.iondesign.us/";
+            linkLabel1.Links.Add(link1);
+            // Add a link to the LinkLabel.
+            LinkLabel.Link link2 = new LinkLabel.Link();
+            link2.LinkData = "http://www.ciena.com/";
+            linkLabel2.Links.Add(link2);
             
-
+            // fix 9/26/14 add task delay here to allow access to Admin beforeFTP process starts
             inStartDelay = true;    // we are delaying start (if user click admin screen during this period, process is stopped until admin screen closes)
             await TaskDelay(ftpdemo.DelayStart * 1000);
             inStartDelay = false;    // done delaying start
@@ -690,29 +698,11 @@ namespace FTPTemp
 
                 switch (i)
                 {
-                    case 0:          //"thb2m.mp4v":
-                        progressBar1.Value = value;
-                        scaleableImageCtrl1.SetOpacity((double)value / 100);
+                    case 4:         //"thb5g.mp4v":
+                        progressBar5.Value = value;
+                        scaleableImageCtrl5.SetOpacity((double)value / 100);
 
-                        //pictureBox1.Image = Picture.SetImageOpacity(img, (float)value/100 );
-                        //ltime1.Text = TimeElapsed + " | " + desc + " | Count: " + status.ToString();   // + " | " + desc;
-                        ltime1.Text = TimeElapsed + " | " + Utils.calcTotalCost(industry.PeopleCount, industry.HourlyRate, elapsed);
-                        break;
-                    case 1:          //"thb10m.mp4v":
-                        progressBar2.Value = value;
-                        scaleableImageCtrl2.SetOpacity((double)value / 100);
-
-                        //pictureBox2.Image = Picture.SetImageOpacity(img, (float)value/100 );
-                        //ltime2.Text = TimeElapsed + " | " + desc + " | Count: " + status.ToString();
-                        ltime2.Text = TimeElapsed + " | " + Utils.calcTotalCost(industry.PeopleCount, industry.HourlyRate, elapsed);
-                        break;
-                    case 2:         //"thb100m.mp4v":
-                        progressBar3.Value = value;
-                        scaleableImageCtrl3.SetOpacity((double)value / 100);
-
-                        //pictureBox3.Image = Picture.SetImageOpacity(img, (float)value/100 );
-                        //ltime3.Text = TimeElapsed + " |" + desc + " | Count: " + status.ToString();
-                        ltime3.Text = TimeElapsed + " | " + Utils.calcTotalCost(industry.PeopleCount, industry.HourlyRate, elapsed);
+                        ltime5.Text = TimeElapsed + " | " + Utils.calcTotalCost(industry.PeopleCount, industry.HourlyRate, elapsed);
                         break;
                     case 3:         //"thb500m.mp4v":
                         progressBar4.Value = value;
@@ -723,12 +713,29 @@ namespace FTPTemp
                         //ltime4.Text = (elapsed.TotalSeconds* 500).ToString("$ 0.##");
                         ltime4.Text = TimeElapsed + " | " + Utils.calcTotalCost(industry.PeopleCount, industry.HourlyRate, elapsed);
                         break;
-                    case 4:         //"thb5g.mp4v":
-                        progressBar5.Value = value;
-                        scaleableImageCtrl5.SetOpacity((double)value / 100);
+                    case 2:         //"thb100m.mp4v":
+                        progressBar3.Value = value;
+                        scaleableImageCtrl3.SetOpacity((double)value / 100);
 
-                        //pictureBox5.Image = Picture.SetImageOpacity(img, (float)value/100 );
-                        ltime5.Text = TimeElapsed + " | " + Utils.calcTotalCost(industry.PeopleCount, industry.HourlyRate, elapsed);
+                        //pictureBox3.Image = Picture.SetImageOpacity(img, (float)value/100 );
+                        //ltime3.Text = TimeElapsed + " |" + desc + " | Count: " + status.ToString();
+                        ltime3.Text = TimeElapsed + " | " + Utils.calcTotalCost(industry.PeopleCount, industry.HourlyRate, elapsed);
+                        break;
+                    case 1:          //"thb10m.mp4v":
+                        progressBar2.Value = value;
+                        scaleableImageCtrl2.SetOpacity((double)value / 100);
+
+                        //pictureBox2.Image = Picture.SetImageOpacity(img, (float)value/100 );
+                        //ltime2.Text = TimeElapsed + " | " + desc + " | Count: " + status.ToString();
+                        ltime2.Text = TimeElapsed + " | " + Utils.calcTotalCost(industry.PeopleCount, industry.HourlyRate, elapsed);
+                        break;
+                    case 0:          //"thb2m.mp4v":
+                        progressBar1.Value = value;
+                        scaleableImageCtrl1.SetOpacity((double)value / 100);
+
+                        //pictureBox1.Image = Picture.SetImageOpacity(img, (float)value/100 );
+                        //ltime1.Text = TimeElapsed + " | " + desc + " | Count: " + status.ToString();   // + " | " + desc;
+                        ltime1.Text = TimeElapsed + " | " + Utils.calcTotalCost(industry.PeopleCount, industry.HourlyRate, elapsed);
                         break;
                 }
             }
@@ -813,7 +820,7 @@ namespace FTPTemp
                 {
                     label1.Invoke((Action)delegate { timer1.Change(Timeout.Infinite, Timeout.Infinite); });
                     // enable start button
-                    label1.Invoke((Action)delegate { button1.Enabled = true; });
+                    //label1.Invoke((Action)delegate { button1.Enabled = true; });
                 }
 
             }
@@ -885,6 +892,11 @@ namespace FTPTemp
             //progressBar1.ForeColor = progressBar2.ForeColor = progressBar3.ForeColor = progressBar4.ForeColor = progressBar5.ForeColor = System.Drawing.ColorTranslator.FromHtml("#d91e26");
             progressBar1.ForeColor = progressBar2.ForeColor = progressBar3.ForeColor = progressBar4.ForeColor = progressBar5.ForeColor = primaryColor;          // Color.FromArgb(0, 91, 187);  // Color.RgoyalBlue;
             progressBar1.Style = progressBar2.Style = progressBar3.Style = progressBar4.Style = progressBar5.Style = ProgressBarStyle.Continuous;
+
+            progressBar1.ForeColor = progressBar2.ForeColor = progressBar3.ForeColor = progressBar4.ForeColor = progressBar5.ForeColor = Utils.getColorFromValue(theme.ProgressbarColor);
+            Utils.SetForeColorToLabels( this, Utils.getColorFromValue(theme.TextColor));
+            this.BackColor = Utils.getColorFromValue(theme.BackgroundColor);
+            
 //            pictureLogo.ImageLocation = demoDir + demoLogo;
 //
 //            if (!File.Exists(demoDir + demoLogo))
@@ -967,6 +979,51 @@ namespace FTPTemp
         {
             Application.Restart();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //string ver = (new WebBrowser()).Version.ToString();
+            if (IsConnectedToInternet())
+            {
+                // Send the URL to the operating system.
+                Process.Start(e.Link.LinkData as string);
+            }
+            else
+            {
+                MessageBox.Show("This application is powered by Ciena and IonDesign. " + Environment.NewLine + "Please visit http://www.ciena.com or http://www.iondesign.us (or email sales@iondesign.us) for more info.");
+            }
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (IsConnectedToInternet())
+            {
+                // Send the URL to the operating system.
+                Process.Start(e.Link.LinkData as string);
+            }
+            else
+            {
+                MessageBox.Show("This application is powered by Ciena and IonDesign. " + Environment.NewLine + "Please visit http://www.ciena.com or http://www.iondesign.us (or email sales@iondesign.us) for more info.");
+            }
+
+        }
+
+        public bool IsConnectedToInternet()
+        {
+            string host = "google.com";
+            bool result = false;
+            Ping p = new Ping();
+            try
+            {
+                PingReply reply = p.Send(host, 3000);
+                if (reply.Status == IPStatus.Success)
+                    return true;
+            }
+            catch { }
+            return result;
+        }
+
 
     }   // Form
 }       // namespace

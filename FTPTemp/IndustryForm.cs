@@ -39,7 +39,7 @@ namespace FTPTemp
             // --- Putting All Data From Selected Table To DataTable ---
             // ---------------------------------------------------------
 
-            mAdapter = new SQLiteDataAdapter("SELECT ID, Name, Description, Occupation, Image, HourlyRate, PeopleCount FROM [Industry]", mConn);
+            mAdapter = new SQLiteDataAdapter("SELECT ID, Name, Description, Occupation, Image, HourlyRate, PeopleCount, Round(HourlyRate*PeopleCount/3600.00,2) as 'Cost Per Sec' FROM [Industry]", mConn);
             //            mAdapter = new SQLiteDataAdapter("SELECT * FROM [Industry]", mConn);
             mTable = new DataTable();
             mAdapter.Fill(mTable);

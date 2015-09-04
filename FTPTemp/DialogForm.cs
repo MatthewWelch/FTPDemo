@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
@@ -24,6 +25,16 @@ namespace FTPTemp
 
         private void DialogForm_Load(object sender, EventArgs e)
         {
+
+            string configSetting = ConfigurationManager.AppSettings["AllowAddDeleteThemes"] ;
+            bool allowAddDelete;
+            if (Boolean.TryParse(configSetting, out allowAddDelete))        // if its a viable boolean app.config setting
+            {
+                //bool configAllowAddDelete = Convert.ToBoolean( ConfigurationManager.AppSettings["AllowAddDeleteThemes"] );
+                dataGridView1.AllowUserToAddRows = allowAddDelete;
+                dataGridView1.AllowUserToDeleteRows = allowAddDelete;
+            }
+
 
             dataGridView1.RowTemplate.Height = 60;
 
@@ -98,8 +109,8 @@ namespace FTPTemp
                 return;
             }
             var dataGridView = (sender as DataGridView);
-            // show image as hand to give visual clue to open dialog to pick image file
-            if (e.ColumnIndex == 3)
+            // show image as hand to give visual clue to open dialog to pick image file or Color
+            if ((e.ColumnIndex == 2) || (e.ColumnIndex >= 3 && e.ColumnIndex <= 5))
             {
                 dataGridView.Cursor = Cursors.Hand;
             }
