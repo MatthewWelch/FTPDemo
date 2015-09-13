@@ -21,7 +21,8 @@ namespace FTPTemp
 
         SQLiteDataAdapter mAdapter1;
         DataTable mTable1;
-        string demoDir = @"C:\demo\";
+//        string demoDir = @"C:\demo\";
+        string demoDir = Application.StartupPath + "/Images/";
 
         public FTPAdminForm()
         {
@@ -286,6 +287,11 @@ namespace FTPTemp
             //loadFile();
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                //if (!Directory.Exists(demoDir))
+                //{
+                    Directory.CreateDirectory(demoDir);
+                //}
+                
                 this.Enabled = false;    // disable during copy
                 string sExt = "1";
                 //if (System.Environment.MachineName.Contains("Demo2"))

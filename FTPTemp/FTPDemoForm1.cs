@@ -32,19 +32,12 @@ namespace FTPTemp
 
         private int _lastFormSize;
 
-        //string[] h = new string[] { "10.10.20.1", "10.10.30.1", "10.10.40.1", "10.10.50.1", "10.10.60.1" };
-        //string[] u = new string[] { "2MEG", "10MEG", "100MEG", "500MEG", "10GIG" };
-        //string[] p = new string[] { "demo", "demo", "demo", "demo", "demo" };
-        //string[] f = new string[] { "thb2m.mp4v", "thb10m.mp4v", "thb100m.mp4v", "thb500m.mp4v", "thb5g.mp4v" };
-        //string[] d = new string[] { "thb2m.mp4v", "thb10m.mp4v", "thb100m.mp4v", "thb500m.mp4v", "thb5g.mp4v" };
-        //string[] s = new string[] { "1660", "332", "166", "33", "4" };      // default # of sec (simulate)
-        //string[] z = new string[] { "0", "0", "0", "0", "0" };              // default to 0, if 1 then simulate (in REAL FTP mode)
 
         //string demoLogo = Properties.Settings.Default.DemoLogo;
         string demoPhoto = "FTPIndustry.jpg";
         //string demoSize = Properties.Settings.Default.DemoSize + "MB";
-        //string demoDiagram = Properties.Settings.Default.DemoDiagram;
-        string demoDir = @"C:\demo\";
+        //string demoDir = @"C:\demo\";
+        string demoDir = Application.StartupPath + "/Images/";
         //string demoAutoRestartString = Properties.Settings.Default.DemoAutoRestart;
         //string demoDelayStartString = Properties.Settings.Default.DemoDelayStart;
         //string demoHeader = Properties.Settings.Default.DemoHeader;
@@ -120,6 +113,11 @@ namespace FTPTemp
 
         private void getData()
         {
+            //if (!Directory.Exists(demoDir))
+            //{
+            Directory.CreateDirectory(demoDir);
+            //}
+
             bool allSimMode = true;     // if all FTPConfiguratios at set to Simulate filesize from Admin screen (not any actual filesize)
             // -------------------- Connecting To DB --------------------
             using (mConn = new SQLiteConnection("Data Source=" + mDbPath))
@@ -893,18 +891,9 @@ namespace FTPTemp
             progressBar1.ForeColor = progressBar2.ForeColor = progressBar3.ForeColor = progressBar4.ForeColor = progressBar5.ForeColor = primaryColor;          // Color.FromArgb(0, 91, 187);  // Color.RgoyalBlue;
             progressBar1.Style = progressBar2.Style = progressBar3.Style = progressBar4.Style = progressBar5.Style = ProgressBarStyle.Continuous;
 
-            if (theme.ProgressbarColor.Length > 0)
-            {
-                progressBar1.ForeColor = progressBar2.ForeColor = progressBar3.ForeColor = progressBar4.ForeColor = progressBar5.ForeColor = Utils.getColorFromValue(theme.ProgressbarColor);
-            }
-            if (theme.TextColor.Length > 0)
-            {
+            progressBar1.ForeColor = progressBar2.ForeColor = progressBar3.ForeColor = progressBar4.ForeColor = progressBar5.ForeColor = Utils.getColorFromValue(theme.ProgressbarColor);
             Utils.SetForeColorToLabels( this, Utils.getColorFromValue(theme.TextColor));
-            }
-            if (theme.BackgroundColor.Length > 0)
-            {
-                this.BackColor = Utils.getColorFromValue(theme.BackgroundColor);
-            }
+            this.BackColor = Utils.getColorFromValue(theme.BackgroundColor);
             
 //            pictureLogo.ImageLocation = demoDir + demoLogo;
 //
